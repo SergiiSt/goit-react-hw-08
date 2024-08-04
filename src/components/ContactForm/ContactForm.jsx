@@ -1,9 +1,9 @@
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 import css from "./ContactForm.module.css";
-import { selectContacts } from "../../redux/contactsSlice";
+import { selectContacts } from "../../redux/contacts/selectors";
 import { FaUserPlus } from "react-icons/fa";
 import { BsFillTelephonePlusFill } from "react-icons/bs";
 
