@@ -28,7 +28,7 @@ export default function ContactsPage() {
       {loading ? (
         <Loader />
       ) : length === 0 ? (
-        <Info>You do not have contacts now!</Info>
+        <Info>You need to add your first contact!</Info>
       ) : (
         <ContactList />
       )}

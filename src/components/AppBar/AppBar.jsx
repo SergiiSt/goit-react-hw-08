@@ -7,6 +7,8 @@ import css from "../AppBar/AppBar.module.css";
 
 export default function AppBar() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  // console.log(isLoggedIn);
+  
   return (
     <>
       <div className={css.container}>

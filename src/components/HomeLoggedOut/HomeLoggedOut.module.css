@@ -1,0 +1,26 @@
+.container {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 55px;
+  color: rgb(66, 46, 195);
+}
+
+.paragraph {
+  display: inline;
+  font-size: 24px;
+  color: rgb(66, 46, 195);
+}
+
+.link {
+  text-decoration: none;
+  border: 2px solid rgb(66, 46, 195);
+  border-radius: 8px;
+  color: rgb(66, 46, 195);
+  padding: 10px;
+}

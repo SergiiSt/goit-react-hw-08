@@ -6,9 +6,18 @@ margin-top: 25px;
 margin-bottom: 35px;
 }
 
+.input:focus {
+  box-shadow: 12px 12px 2px 1px rgba(126, 126, 145, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
 .input {
   width: 345px;
-  font-size: 20px;
+  font-size: 24px;
   border-color: rgb(66, 46, 195);
   border-radius: 8px;
+}
+
+h2 {
+color: rgb(66, 46, 195);
 }

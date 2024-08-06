@@ -1,0 +1,57 @@
+.container {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+.formWrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.label {
+  display: block;
+  font-size: 24px;
+}
+
+.span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: rgb(66, 46, 195);
+}
+
+.field {
+  width: 400px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(66, 46, 195);
+  border-radius: 8px;
+}
+
+.field:focus {
+  box-shadow: 12px 12px 2px 1px rgba(126, 126, 145, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.fieldWrap {
+  height: 115px;
+}
+
+.button {
+  border: 1px solid rgb(66, 46, 195);
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+}

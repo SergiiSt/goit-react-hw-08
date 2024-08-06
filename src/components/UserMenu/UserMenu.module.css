@@ -1,3 +1,25 @@
+.userMenuWrap {
+  display: inline;
+  margin-left: 420px;
+}
+
 .userMenu {
   display: inline;
+  font-size: 24px;
+}
+
+.userButton {
+  margin-left: 10px;
+  font-size: 24px;
+  border: 1px solid rgb(66, 46, 195);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.userButton:hover {
+  background-color: white;
+}
+
+.userName {
+  color: rgb(66, 46, 195);
 }

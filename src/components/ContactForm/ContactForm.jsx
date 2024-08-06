@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import toast, { Toaster } from "react-hot-toast";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
@@ -9,12 +10,12 @@ import { BsFillTelephonePlusFill } from "react-icons/bs";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
-    .min(3, "Too short")
-    .max(50, "Too long")
+    .min(3, "Too short, minimum ${min} characters")
+    .max(50, "Too long, maximum ${max} characters")
     .required("Required field"),
   number: Yup.string()
-    .min(3, "Too short")
-    .max(50, "Too long")
+    .min(3, "Too short, minimum ${min} characters")
+    .max(50, "Too long, maximum ${max} characters")
     .required("Required field"),
 });
 
@@ -31,40 +32,44 @@ export default function ContactForm() {
     } else {
       dispatch(addContact({ name: values.name, number: values.number }));
       actions.resetForm();
+      toast.success("Contact added successfully!");
     }
   };
 
   return (
-    <Formik
-      initialValues={{
-        name: "",
-        number: "",
-      }}
-      validationSchema={ContactSchema}
-      onSubmit={handlerSubmit}
-    >
-      <Form className={css.formWrap}>
-        <div className={css.fieldWrap}>
-          <label className={css.label}>
-            Name <FaUserPlus className={css.userIcon} />
-          </label>
-          <Field className={css.field} type="text" name="name" />
-          <ErrorMessage className={css.error} name="name" component="div" />
-        </div>
+    <>
+      <Formik
+        initialValues={{
+          name: "",
+          number: "",
+        }}
+        validationSchema={ContactSchema}
+        onSubmit={handlerSubmit}
+      >
+        <Form className={css.formWrap}>
+          <div className={css.fieldWrap}>
+            <label className={css.label}>
+              Name <FaUserPlus className={css.userIcon} />
+            </label>
+            <Field className={css.field} type="text" name="name" />
+            <ErrorMessage className={css.error} name="name" component="div" />
+          </div>
 
-        <div className={css.fieldWrap}>
-          <label className={css.label}>
-            Number
-            <BsFillTelephonePlusFill className={css.phoneIcon} />
-          </label>
-          <Field className={css.field} type="text" name="number" />
-          <ErrorMessage className={css.error} name="number" component="div" />
-        </div>
+          <div className={css.fieldWrap}>
+            <label className={css.label}>
+              Number
+              <BsFillTelephonePlusFill className={css.phoneIcon} />
+            </label>
+            <Field className={css.field} type="text" name="number" />
+            <ErrorMessage className={css.error} name="number" component="div" />
+          </div>
 
-        <button className={css.button} type="submit">
-          Add contact
-        </button>
-      </Form>
-    </Formik>
+          <button className={css.button} type="submit">
+            Add contact
+          </button>
+        </Form>
+      </Formik>
+      <Toaster />
+    </>
   );
 }

@@ -3,6 +3,7 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
+  updateContact,
 } from "../contacts/operations";
 
 import { logOut } from "../auth/operations";
@@ -58,6 +59,20 @@ const contactsSlice = createSlice({
         state.items = [];
         state.error = false;
         state.loading = false;
+      })
+      .addCase(updateContact.pending, (state) => {
+        state.loading = true;
+        state.error = false;
+      })
+      .addCase(updateContact.fulfilled, (state, action) => {
+        state.loading = false;
+        state.items = state.items.map((contact) =>
+          contact.id === action.payload.id ? action.payload : contact
+        );
+      })
+      .addCase(updateContact.rejected, (state) => {
+        state.loading = false;
+        state.error = true;
       });
   },
 });

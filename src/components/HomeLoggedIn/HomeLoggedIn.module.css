@@ -1,0 +1,21 @@
+.container {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 55px;
+}
+
+.paragraph {
+  display: inline;
+  padding: 10px;
+  margin-top: 1005px;
+  font-size: 24px;
+  border: 2px solid rgb(66, 46, 195);
+  border-radius: 8px;
+  color: rgb(66, 46, 195);
+}

@@ -7,6 +7,11 @@
   padding: 25px;
 }
 
+.formWrap:focus-within {
+  box-shadow: 12px 12px 2px 1px rgba(126, 126, 145, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
 .fieldWrap {
   margin-bottom: 15px;
   height: 88px;
@@ -15,13 +20,14 @@
 .label {
   display: block;
   margin-bottom: 5px;
-  font-size: 23px;
+  font-size: 24px;
+  color: rgb(66, 46, 195);
 }
 
 .field {
   width: 345px;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 24px;
   border-color: rgb(66, 46, 195);
   border-radius: 8px;
 }
@@ -42,6 +48,7 @@
   border: 1px solid rgb(66, 46, 195);
   border-radius: 8px;
   cursor: pointer;
+  font-size: 24px;
 }
 
 .button:hover {

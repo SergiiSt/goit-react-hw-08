@@ -1,10 +1,15 @@
+.navWrap {
+  display: inline;
+}
+
 .nav {
   text-decoration: none;
   font-size: 24px;
+  color: rgb(66, 46, 195);;
 }
 
 .first {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .second {

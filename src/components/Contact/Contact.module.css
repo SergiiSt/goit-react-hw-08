@@ -8,6 +8,7 @@
 
 .cardWrap:hover {
   box-shadow: 12px 12px 2px 1px rgba(126, 126, 145, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 .nameParagraph {
@@ -22,7 +23,7 @@
 
 .button {
   position: absolute;
-  top: 32px;
+  top: 17px;
   left: 210px;
   border: 1px solid rgb(66, 46, 195);
   border-radius: 8px;
@@ -32,6 +33,21 @@
 }
 
 .button:hover {
+  background-color: white;
+}
+
+.buttonUp {
+  position: absolute;
+  top: 51px;
+  left: 210px;
+  border: 1px solid rgb(66, 46, 195);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.buttonUp:hover {
   background-color: white;
 }
 
@@ -62,4 +78,36 @@
 
 .nButton:hover {
   background-color: lightcoral;
+}
+
+.label {
+  display: block;
+  font-size: 24px;
+}
+
+.span {
+  display: block;
+  font-size: 24px;
+  color: rgb(66, 46, 195);
+}
+
+.field {
+  width: 400px;
+  margin-bottom: 25px;
+  border: 1px solid rgb(66, 46, 195);
+  border-radius: 8px;
+}
+.modalButton {
+  border: 1px solid rgb(66, 46, 195);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline;
+  font-size: 24px;
+}
+.modalButton:hover {
+  background-color: white;
+}
+
+.modalButton:last-child {
+margin-left: 232px;
 }
